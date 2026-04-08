@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #eef3fb;
+      --text: #0c2340;
+      --text-muted: #4a6080;
+      --border: rgba(24,95,165,0.15);
+      --accent: #185fa5;
+      --accent-light: #e6f1fb;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; border-bottom: 0.5px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 10; }
+    .nav-logo { font-size: 16px; font-weight: 500; color: var(--accent); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--accent); }
+    .hero { padding: 4rem 2rem 3rem; max-width: 720px; }
+    .hero-tag { font-size: 12px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; font-weight: 500; }
+    .hero h1 { font-size: 36px; font-weight: 500; line-height: 1.2; margin-bottom: 1rem; }
+    .hero p { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 560px; }
+    .hero-btns { display: flex; gap: 12px; margin-top: 1.5rem; }
+    .btn { padding: 8px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; border: 0.5px solid var(--accent); background: transparent; color: var(--accent); text-decoration: none; display: inline-block; }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .section { padding: 2.5rem 2rem; border-top: 0.5px solid var(--border); }
+    .section-label { font-size: 12px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; font-weight: 500; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+    .skill-card { background: var(--accent-light); border-radius: 12px; padding: 1rem 1.25rem; border: 0.5px solid var(--border); }
+    .skill-icon { font-size: 16px; margin-bottom: 8px; color: var(--accent); }
+    .skill-name { font-size: 14px; font-weight: 500; margin-bottom: 4px; color: var(--text); }
+    .skill-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .project-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+    .project-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; background: var(--accent-light); color: var(--accent); margin-bottom: 12px; font-weight: 500; }
+    .project-title { font-size: 15px; font-weight: 500; margin-bottom: 6px; color: var(--text); }
+    .project-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .activities { display: flex; flex-direction: column; gap: 16px; }
+    .activity { display: flex; gap: 16px; align-items: flex-start; }
+    .activity-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 6px; flex-shrink: 0; }
+    .activity-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; color: var(--text); }
+    .activity-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .contact-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .contact-chip { padding: 8px 16px; border-radius: 20px; border: 0.5px solid var(--accent); font-size: 13px; color: var(--accent); text-decoration: none; }
+    .contact-chip:hover { background: var(--accent-light); }
+    footer { padding: 1.5rem 2rem; border-top: 0.5px solid var(--border); font-size: 13px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">YourName</span>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="hero-tag">Sophomore · Montville, NJ</p>
+  <h1>Developer, athlete,<br>problem solver.</h1>
+  <p>I build things with code, compete in business, and bring structured thinking to everything I do — from Java programs to FBLA nationals.</p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+</div>
+
+<div class="section" id="skills">
+  <p class="section-label">Skills</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">{ }</div>
+      <div class="skill-name">Java</div>
+      <div class="skill-desc">Object-oriented programming, recursion, algorithmic logic</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">&#9881;</div>
+      <div class="skill-name">Web development</div>
+      <div class="skill-desc">HTML, CSS, and front-end design for functional interfaces</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">&#9998;</div>
+      <div class="skill-name">Problem solving</div>
+      <div class="skill-desc">Breaking down complex systems into logical, structured solutions</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">&#9670;</div>
+      <div class="skill-name">Organization</div>
+      <div class="skill-desc">Detail-oriented, precise, and consistent across all projects</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="projects">
+  <p class="section-label">Projects</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-tag">Java</span>
+      <div class="project-title">Minesweeper</div>
+      <div class="project-desc">A fully functional Minesweeper game built in Java featuring recursive flood-fill logic, game state management, and a clean UI.</div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">Web</span>
+      <div class="project-title">Portfolio site</div>
+      <div class="project-desc">This personal website — designed and coded from scratch to showcase projects, skills, and activities.</div>
+    </div>
+    <div class="project-card">
+      <span class="project-tag">In progress</span>
+      <div class="project-title">Next project</div>
+      <div class="project-desc">Always building something new. Check back soon for updates on current work.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="activities">
+  <p class="section-label">Activities</p>
+  <div class="activities">
+    <div class="activity">
+      <div class="activity-dot"></div>
+      <div>
+        <div class="activity-title">FBLA — Finalist, State Leadership Conference</div>
+        <div class="activity-desc">Competed in a business-focused event at the state level, qualifying for Nationals.</div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="activity-dot"></div>
+      <div>
+        <div class="activity-title">Tennis Camp Volunteer — 100+ hours</div>
+        <div class="activity-desc">Coached younger players, developed leadership and communication skills over a full summer.</div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="activity-dot"></div>
+      <div>
+        <div class="activity-title">Varsity tennis — first doubles</div>
+        <div class="activity-desc">Earned a varsity spot as a first doubles player, competing at a high level while developing discipline, consistency, and the ability to perform under pressure.</div>
+      </div>
+    </div>
+    <div class="activity">
+      <div class="activity-dot"></div>
+      <div>
+        <div class="activity-title">Drums</div>
+        <div class="activity-desc">Multi-year experience building rhythm, focus, and the ability to stay locked in on a task.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="contact">
+  <p class="section-label">Contact</p>
+  <div class="contact-row">
+    <a href="/cdn-cgi/l/email-protection#87fee8f2f5e2eae6eeebc7e2eae6eeeba9e4e8ea" class="contact-chip"><span class="__cf_email__" data-cfemail="f0899f8582959d91999cb0959d91999cde939f9d">[email&#160;protected]</span></a>
+    <a href="https:/
