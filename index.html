@@ -49,6 +49,36 @@
     .contact-chip { padding: 8px 16px; border-radius: 20px; border: 0.5px solid var(--accent); font-size: 13px; color: var(--accent); text-decoration: none; }
     .contact-chip:hover { background: var(--accent-light); }
     footer { padding: 1.5rem 2rem; border-top: 0.5px solid var(--border); font-size: 13px; color: var(--text-muted); }
+    /* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card hover animation */
+.project-card,
+.skill-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* Button hover */
+.btn:hover {
+  background: var(--accent-light);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Link smooth color transition */
+a {
+  transition: color 0.2s ease;
+}
   </style>
 </head>
 <body>
